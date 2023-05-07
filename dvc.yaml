@@ -1,0 +1,10 @@
+stages:
+  test:
+    cmd: echo "MIC Check"
+  train_data:
+    cmd: python train.py
+    deps:
+    - transactions.csv
+    metrics:
+    - metrics.json:
+        cache: false
